@@ -123,7 +123,7 @@ abrir_software() {
 
     if [ \"$abrir\" == \"sim\" ]; 
     then
-        cd /home/$USER/Desktop/Quality-System/jar/jarProjeto
+        cd /home/$USER/Desktop/Quality-System/ac3-individual/jar/jarProjeto
 
         sleep 1
         echo "$(tput setaf 10)[Manivela]:$(tput setaf 7) Abrindo nossa aplicação"
