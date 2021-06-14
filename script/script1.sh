@@ -61,7 +61,7 @@ abrir_software() {
 
     if [ \"$abrir\" == \"sim\" ]; 
     then
-        cd /home/$USER/Desktop/Quality-System/ac3-individual/executavelJar
+        cd /home/$USER/Desktop/ac3-individual/executavelJar
 
         sleep 1
         echo "$(tput setaf 10)[Manivela]:$(tput setaf 7) Abrindo nossa aplicação"
@@ -81,7 +81,7 @@ instalar_aplicacao() {
             mkdir /home/$USER/Desktop/Quality-System
             cd /home/$USER/Desktop/Quality-System
 
-            git clone https://github.com/Italo-de-Souza/ac3-individual.git
+            git clone https://github.com/Ogabrielmonteiro/jar.git
 
             sleep 1
 
