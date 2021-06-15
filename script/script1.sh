@@ -46,6 +46,25 @@ instalar_java() {
     fi
 }
 
+instalar_aplicacao() {
+    echo "$(tput setaf 10)[Manivela]:$(tput setaf 7) Deseja realizar a instalação do software da Quality System? (sim/nao)"
+        read repositorio
+
+        if [ \"$repositorio\" == \"sim\" ]; 
+        then
+            mkdir /home/$USER/Desktop/Quality-System
+            cd /home/$USER/Desktop/Quality-System
+
+            git clone https://github.com/Italo-de-Souza/ac3-individual.git
+
+            sleep 1
+
+            abrir_software
+        else
+            echo "$(tput setaf 10)[Manivela]:$(tput setaf 7) Você optou por não instalar o software, até a próxima."
+            exit 0
+        fi
+}
 instalar_docker() {
     echo "$(tput setaf 10)[Manivela]:$(tput setaf 7) Verificando docker..."
     sleep 2
@@ -95,26 +114,6 @@ instalar_docker() {
             verificar_java
         fi
     fi
-}
-
-instalar_aplicacao() {
-    echo "$(tput setaf 10)[Manivela]:$(tput setaf 7) Deseja realizar a instalação do software da Quality System? (sim/nao)"
-        read repositorio
-
-        if [ \"$repositorio\" == \"sim\" ]; 
-        then
-            mkdir /home/$USER/Desktop/Quality-System
-            cd /home/$USER/Desktop/Quality-System
-
-            git clone https://github.com/Italo-de-Souza/ac3-individual.git
-
-            sleep 1
-
-            abrir_software
-        else
-            echo "$(tput setaf 10)[Manivela]:$(tput setaf 7) Você optou por não instalar o software, até a próxima."
-            exit 0
-        fi
 }
 
 abrir_software() {
